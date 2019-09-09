@@ -9,14 +9,15 @@
   
      // julian leap = 1 not leap = 2 , Gregorian leap = 11 not leap = 22
         // Predicate<Integer> isJulianLeapYear  = i -> (i>1918)?(i%4==0):(i%400==0||(i%4==0&           &i%100!=0));
-        
-        
-        
         Function<Integer,String> isLeapYear = i -> (i<1918)?((i%4==0)?"Julian Leap":"Julian Not Leap"):((i%4==0 && i%100!=0)?"Gregorian Leap":"Gregorian Not Leap");
-        
-        
-        
-        
-        
         System.out.println(isLeapYear.apply(year));
         return "";
+
+
+Creating java objects......this are the ways to do so:-------
+    
+  1.  Using the new keyword  -  The constructor gets called
+  2.  Using newInstance() method of Class class  -  The constructor gets called
+  3.  Using newInstance() method of Constructor class  -  The constructor gets called
+  4.  Using clone() method  -  No constructor call
+  5.  Using deserialization - No constructor call
