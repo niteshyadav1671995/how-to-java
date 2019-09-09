@@ -1,0 +1,22 @@
+#Continue
+- A continue keyword is used to immediately jump to the next iteration of the loop. 
+  When continue used in the While Loop - it will jump to the boolean expression
+                            For Loop - It will jump to update the variable.
+                            
+- A break keyword is used to immediately terminated and the program control resumes to the next statement following the loop.
+  It is also used in the
+  
+  
+     // julian leap = 1 not leap = 2 , Gregorian leap = 11 not leap = 22
+        // Predicate<Integer> isJulianLeapYear  = i -> (i>1918)?(i%4==0):(i%400==0||(i%4==0&           &i%100!=0));
+        
+        
+        
+        Function<Integer,String> isLeapYear = i -> (i<1918)?((i%4==0)?"Julian Leap":"Julian Not Leap"):((i%4==0 && i%100!=0)?"Gregorian Leap":"Gregorian Not Leap");
+        
+        
+        
+        
+        
+        System.out.println(isLeapYear.apply(year));
+        return "";
