@@ -58,8 +58,13 @@ Creating java objects......this are the ways to do so:-------
     Objects can be created
   
   - Pojo Class
+    A class with private members and getter and setter for accessing and modifying those variables
+  
   - Static Class
+    Static classes are nested classes means a class declared within another class as a static member is called a static class.
+  
   - Inner Class
+    A class defined inside a classs.
  
  
  
