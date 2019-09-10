@@ -44,7 +44,8 @@ Creating java objects......this are the ways to do so:-------
   - Concrete Class
     Object can be created
     methods can not be abstract.
-    can have static or inner clases
+    can have static or inner classes
+    
   - Abstract Class
     Zero or more abstract methods.
     Objects can not be created.
