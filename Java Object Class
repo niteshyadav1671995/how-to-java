@@ -17,7 +17,23 @@
 Creating java objects......this are the ways to do so:-------
     
   1.  Using the new keyword  -  The constructor gets called
-  2.  Using newInstance() method of Class class  -  The constructor gets called
-  3.  Using newInstance() method of Constructor class  -  The constructor gets called
-  4.  Using clone() method  -  No constructor call
+
+  2.  Using newInstance() method of Class class  -  The constructor gets called, only no-arg constructor is called.
+    Employee emp2 = (Employee) Class.forName("org.programming.mitra.exercises.Employee").newInstance();
+      OR
+    Employee emp2 = Employee.class.newInstance();
+    "org.programming.mitra.exercises.Employee", full path is not required if the class is present in the java.lang package.
+ 
+  3.  Using newInstance() method of Constructor class  -  The constructor gets called, any constructor from the class can be used to create the object
+    Constructor<Employee> constructor = Employee.class.getConstructor(<T>.class);  for exe getContructor(String.class,int.class);
+    Employee emp3 = constructor.newInstance("",2);
+    
+  4.  Using clone() method  -  No constructor call 
+    Employee emp4 = (Employee) emp3.clone();
+    If Employee class is not implementing the clonable object then you have to Implement the Clonable Marker Interface.
+    
   5.  Using deserialization - No constructor call
+    To deserialize an object, we need to implement a Serializable interface in our class. 
+    ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.obj"));
+    Employee emp5 = (Employee) in.readObject();
+  https://www.programmingmitra.com/2019/08/what-is-serialization-everything-about-java-serialization-explained-with-example.html
